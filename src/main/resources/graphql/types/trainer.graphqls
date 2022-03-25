@@ -1,0 +1,14 @@
+type Trainer {
+    id: ID!,
+    name: String,
+    age: Int,
+    gym: Gym,
+    pokemons: [Pokemon],
+    insignias: [Insignia]
+}
+
+input TrainerInput {
+    name: String!,
+    age: Int,
+    gym: GymInput
+}

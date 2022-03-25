@@ -1,5 +1,6 @@
 package com.pokemon.pokedex.service;
 
+import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.pokemon.pokedex.model.Trainer;
 import com.pokemon.pokedex.repository.TrainerRepository;
@@ -9,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class TrainerService implements GraphQLQueryResolver {
+public class TrainerService implements GraphQLQueryResolver, GraphQLMutationResolver {
 
     private final TrainerRepository trainerRepository;
 
@@ -23,6 +24,10 @@ public class TrainerService implements GraphQLQueryResolver {
 
     public Optional<Trainer> getTrainerById(Integer id) {
         return trainerRepository.findById(id);
+    }
+
+    public Trainer createTrainer(Trainer trainer) {
+        return trainerRepository.save(trainer);
     }
 
 }

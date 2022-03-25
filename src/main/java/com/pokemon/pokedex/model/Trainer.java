@@ -15,7 +15,7 @@ import java.util.Set;
 @Builder
 @Getter
 @Entity
-@Table(name = "trainer")
+@Table(name = "trainer", uniqueConstraints = { @UniqueConstraint(columnNames = "gym_id")})
 public class Trainer implements Serializable {
 
     @Id

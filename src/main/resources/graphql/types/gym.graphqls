@@ -5,3 +5,7 @@ type Gym {
     trainer: Trainer,
     insignia: Insignia
 }
+
+input GymInput {
+    id: ID!
+}

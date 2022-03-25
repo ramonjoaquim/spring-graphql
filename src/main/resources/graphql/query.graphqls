@@ -1,7 +1,9 @@
 schema {
-    query: Query
+    query: Query,
+    mutation: Mutation
 }
 
+# The Root Query for the application
 type Query {
     # Fetch all Trainers
     getAllTrainers: [Trainer],
@@ -33,4 +35,10 @@ type Query {
     getAllInsignias: [Insignia]
     # Fetch Insignia by ID
     getInsigniaById(id: Int): Insignia
+}
+
+# The Root Mutation for the application
+type Mutation {
+    # Create trainer
+    createTrainer(trainer: TrainerInput): Trainer
 }
