@@ -1,0 +1,36 @@
+schema {
+    query: Query
+}
+
+type Query {
+    # Fetch all Trainers
+    getAllTrainers: [Trainer],
+    # Fetch Trainer by ID
+    getTrainerById(id: ID): Trainer,
+
+    # Fetch all Pokemons
+    getAllPokemons: [Pokemon],
+    # Fetch Pokemon By name
+    getPokemonByName(name: String): [Pokemon],
+    # Fetch Pokemon By ID
+    getPokemonById(id: Int): Pokemon,
+    # Fetch Pokemon By Trainer ID
+    getPokemonByTrainerId(id: Int): [Pokemon],
+
+    # Fetch all Regions
+    getAllRegions: [Region],
+    # Fetch Region by name
+    getRegionByName(name: String!): [Region],
+    # Fetch Region by ID
+    getRegionById(id: Int): Region,
+
+    # Fetch all Gyms
+    getAllGyms: [Gym],
+    # Fetch Gym by ID
+    getGymById(id: Int): Gym,
+
+    # Fetch all Insignias
+    getAllInsignias: [Insignia]
+    # Fetch Insignia by ID
+    getInsigniaById(id: Int): Insignia
+}

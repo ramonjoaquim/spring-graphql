@@ -1,0 +1,7 @@
+type Gym {
+    id: ID!,
+    name: String!,
+    region: Region!,
+    trainer: Trainer,
+    insignia: Insignia
+}

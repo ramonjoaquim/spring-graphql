@@ -1,0 +1,6 @@
+type Insignia {
+    id: ID!
+    name: String!,
+    gym: Gym,
+    trainer: Trainer
+}
