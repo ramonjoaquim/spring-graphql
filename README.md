@@ -1,4 +1,4 @@
-#Spring-boot + GraphQL
+# Spring-boot + GraphQL
 ## Study by graphQL with Spring boot
 
 ### Setup project
