@@ -3,13 +3,7 @@
 
 ### Setup project
 
-run this command to set up the database in directory docker/postgres
-
-```bash
-docker-compose up -d
-```
-
-after this, run project normally 
+run project normally 
 ```bash
 mvn spring-boot:run
 ```
@@ -18,6 +12,11 @@ the project has a dependency called *graphiql-spring-boot-starter* with serve a 
 on the port 
 ```bash
 http://localhost:8080/graphiql
+```
+
+for h2 console
+```bash
+http://localhost:8080/h2-console
 ```
 
 Example for get all trainers 
